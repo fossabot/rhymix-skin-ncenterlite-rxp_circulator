@@ -1,0 +1,50 @@
+<div class="cl container section">
+	<h3>내 알림목록</h3>
+</div>
+
+<include target="common_header.html" />
+<include target="php/function.php" />
+
+{@
+  $circulator = new circulatorCustomFunction();
+}
+
+<ul class="cl list">
+  
+		<!--@foreach($ncenterlite_list as $no => $val)-->
+		<li>
+      <div class="cl flex flex-left">
+        <div class="cl list-profile">
+          <img src="{$val->profileImage}"|cond="$val->profileImage" src="{Context::getRequestUri()}modules/ncenterlite/skins/circulator_ncenterlite/img/ic_profile_default.png"|cond="!$val->profileImage" alt="" width="40" height="40" />
+        </div>
+
+        <div>
+          <h5 class="cl list-text">{$val->text}</h5>
+      
+          <div class="cl list-meta">
+            <div class="cl history-auth read" cond="$val->readed=='Y'"></div>
+            <div class="cl history-auth" cond="$val->readed=='N'"></div>
+            <span>{$circulator->reformatDate($val->regdate,"Y-m-d")}</span>
+          </div>
+        </div>
+      </div>
+      
+
+      <a class="cl overlay" href="{$val->target_url}"></a>
+    </li>
+		<!--@endforeach-->
+</ul>
+
+<div class="cl pagination pagination-centered">
+	<ul>
+		<li><a href="{getUrl('page','')}" class="direction"><i class="xi-angle-left"></i></a></li>
+		<!--@if($page_navigation)-->
+		<!--@while($page_no = $page_navigation->getNextPage())-->
+		<li class="active"|cond="$page == $page_no"><a href="{getUrl('page',$page_no)}">{$page_no}</a></li>
+		<!--@end-->
+		<!--@end-->
+		<li><a href="{getUrl('page',$page_navigation->last_page)}" class="direction"><i class="xi-angle-right"></i></a></li>
+	</ul>
+</div>
+
+<include target="./common_footer.html" />

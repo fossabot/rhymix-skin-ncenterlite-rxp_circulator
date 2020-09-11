@@ -1,0 +1,30 @@
+
+/* ========================================================================
+ Component: Utilities
+ ========================================================================== */
+
+.cl.border-circle {
+  border-radius: 50%;
+}
+
+.cl.border-rounded {
+  border-radius: $border-rounded-border-radius;
+}
+
+.cl.border-max-rounded {
+  border-radius: 500px;
+}
+
+/* Float
+ ========================================================================== */
+.cl.float-left {
+  float: left;
+}
+
+.cl.float-right {
+  float: right;
+}
+
+.cl.margin-bottom-medium {
+  margin-bottom: $padding-medium;
+}

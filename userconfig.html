@@ -1,0 +1,72 @@
+<div class="cl container section">
+	<h3>내 알림 설정</h3>
+</div>
+
+<include target="./common_header.html" />
+
+<div class="xm">
+  <div cond="$XE_VALIDATOR_MESSAGE && $XE_VALIDATOR_ID == 'modules/ncenterlite/skins/circulator_ncenterlite/userconfig/1'" class="cl alert {$XE_VALIDATOR_MESSAGE_TYPE}">
+    <p>{$XE_VALIDATOR_MESSAGE}</p>
+  </div>
+
+  <form ruleset="insertConfig" action="./" method="post" class="form-horizontal" id="fo_ncenterlite">
+    <input type="hidden" name="module" value="ncenterlite" />
+    <input type="hidden" name="act" value="procNcenterliteUserConfig" />
+    <input type="hidden" name="xe_validator_id" value="modules/ncenterlite/skins/circulator_ncenterlite/userconfig/1" />
+    <input type="hidden" name="member_srl" value="{$member_srl}">
+
+    <section class="cl section">
+      <div class="cl config-header">
+        <h3 class="cl config-title">내 알림 설정</h3>
+        <p class="cl config-meta">{$lang->ncenterlite_userconfig_about} <strong style="color:#ff0000" cond="$member_srl && $member_srl != $logged_info->member_srl">({$lang->ncenterlite_userconfig_about_warning})</strong></p>
+      </div>
+
+      <div class="cl control-group">
+        <div class="cl control-info">
+          <h4 class="cl control-title">{$lang->ncenterlite_comment_noti}</h4>
+          <p class="cl control-meta">{$lang->ncenterlite_comment_noti_about}</p>
+        </div>
+
+        <div class="cl control">
+          <input type="radio" id="comment-notify" class="cl toggle" name="comment_notify" value="Y" checked="checked"|cond="$user_config->comment_notify == 'Y'" />
+          <div class="cl button-toggle"></div>
+          <input type="radio" name="comment_notify" value="N" checked="checked"|cond="$user_config->comment_notify == 'N'" />
+        </div>
+      </div>
+
+      <div class="cl control-group">
+        <div class="cl control-info">
+          <h4 class="cl control-title">{$lang->ncenterlite_mention_noti}</h4>
+          <p class="cl control-meta">{$lang->ncenterlite_mention_noti_about}</p>
+        </div>
+
+        <div class="cl control">
+          <input type="radio" id="mention-notify" class="cl toggle" name="mention_notify" value="Y" checked="checked"|cond="$user_config->mention_notify == 'Y'" />
+          <div class="cl button-toggle"></div>
+          <input type="radio" name="mention_notify" value="N" checked="checked"|cond="$user_config->mention_notify == 'N'" />
+        </div>
+      </div>
+
+      <div class="cl control-group">
+        <div class="cl control-info">
+          <h4 class="cl control-title">{$lang->ncenterlite_message_noti}</h4>
+          <p class="cl control-meta">{$lang->ncenterlite_message_noti_about}</p>
+        </div>
+
+        <div class="cl control">
+          <input type="radio" id="message-notify" class="cl toggle" name="message_notify" value="Y" checked="checked"|cond="$user_config->message_notify == 'Y'" />
+          <div class="cl button-toggle"></div>
+          <input type="radio" name="message_notify" value="N" checked="checked"|cond="$user_config->message_notify == 'N'" />
+        </div>
+      </div>
+    </section>
+
+    <div class="cl margin-bottom-medium">
+      <div class="cl flex flex-right">
+        <button class="cl button button-primary" type="submit">{$lang->cmd_registration}</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<include target="./common_footer.html" />

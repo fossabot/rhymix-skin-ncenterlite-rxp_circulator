@@ -1,0 +1,52 @@
+#nc_container {
+  background-color: #d2f1eb;
+  color: #009688;
+}
+#nc_container a {
+  color: #009688;
+}
+#nc_container a:hover {
+  color: #009688;
+}
+#nc_container strong {
+  color: #009688
+}
+#nc_container a.notify strong {
+  color: #009688;
+}
+#nc_container .msg {
+  color: #666;
+}
+#nc_container .list {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+#nc_container .list li {
+  background-color: #fff;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+#nc_container .list li a:hover {
+  background-color: #f8f8f8;
+}
+#nc_container .list span.ago {
+  color: #999;
+}
+#nc_container .list a.notify .num {
+  background-color: #009688;
+  color: white;
+}
+#nc_container .list .more:hover {
+  background-color: #f8f8f8;
+}
+#nc_container a.readall {
+  color: #009688;
+}
+
+#nc_container a.notify {
+  color: #009688;
+}
+#nc_container a.notify .num {
+  background-color: #009688;
+  color: #fff;
+}

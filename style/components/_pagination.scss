@@ -1,0 +1,46 @@
+
+/* ========================================================================
+ Component: Pagination
+ ========================================================================== */
+ .cl.pagination-centered {
+	text-align: center;
+}
+
+.cl.pagination {
+  margin-bottom: 40px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        padding: 4px 10px;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        color: $color-base;
+        font-size: $global-font-size;
+        &.direction {
+          padding: 10px;
+        }
+        &:not(.direction) {
+        }
+        &:hover {
+          color: #666;
+        }
+        &:active {
+          color: $color-base-darker;
+        }
+      }
+      &.active > a {
+        color: $color-content;
+        border-radius: 500px;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+
+

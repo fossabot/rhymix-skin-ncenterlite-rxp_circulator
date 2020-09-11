@@ -1,0 +1,37 @@
+
+/* ========================================================================
+ Component: Text
+ ========================================================================== */
+
+/* font Size
+ ========================================================================== */
+
+.cl.text-xsmall {
+  font-size: 12px;
+}
+.cl.text-small {
+  font-size: 14px;
+}
+
+/* Text Color
+ ========================================================================== */
+
+.cl.text-default {
+  color: $color-base-darker !important;
+}
+
+.cl.text-primary {
+  color: $color-primary !important;
+}
+
+.cl.text-success {
+  color: $color-success !important;
+}
+
+.cl.text-danger {
+  color: $color-danger !important;
+}
+
+.cl.text-muted {
+  color: $color-base !important;
+}

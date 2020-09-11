@@ -1,0 +1,105 @@
+
+/* ========================================================================
+ Component: Visibility
+ ========================================================================== */
+
+/*
+ * Hidden
+ * `hidden` attribute also set here to make it stronger
+ */
+
+.cl.cldden { display: none !important; }
+ 
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+  .cl.cldden\@s { display: none !important; } 
+}
+ 
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+  .cl.cldden\@m { display: none !important; }
+}
+ 
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+  .cl.cldden\@l { display: none !important; }
+}
+ 
+/* Large screen and bigger */
+@media (min-width: $breakpoint-xlarge) {
+  .cl.cldden\@xl { display: none !important; }
+}
+ 
+ /*
+  * Visible
+  */
+ 
+ /* Phone portrait and smaller */
+ @media (max-width: $breakpoint-xsmall-max) {
+ 
+     .cl.visible\@s { display: none !important; }
+ 
+ }
+ 
+ /* Phone landscape and smaller */
+ @media (max-width: $breakpoint-small-max) {
+ 
+     .cl.visible\@m { display: none !important; }
+ 
+ }
+ 
+ /* Tablet landscape and smaller */
+ @media (max-width: $breakpoint-medium-max) {
+ 
+     .cl.visible\@l { display: none !important; }
+ 
+ }
+ 
+ /* Desktop and smaller */
+ @media (max-width: $breakpoint-large-max) {
+ 
+     .cl.visible\@xl { display: none !important; }
+ 
+ }
+ 
+ 
+ /* Visibility
+  ========================================================================== */
+ 
+ .cl.invisible { visibility: hidden !important; }
+ 
+ 
+ /* Hover
+  ========================================================================== */
+ 
+ /* Hidden */
+ .cl.visible-toggle:not(:hover):not(.cl.hover) .cl.cldden-hover { display: none !important; }
+ 
+ /* Invisible */
+ .cl.visible-toggle:not(:hover):not(.cl.hover) .cl.invisible-hover { visibility: hidden !important; }
+ 
+ 
+ /* Touch
+  ========================================================================== */
+ 
+ /*
+  * Hide if primary pointing device has limited accuracy, e.g. a touch screen.
+  * Works on mobile browsers: Safari, Chrome and Android browser
+  */
+ 
+ @media (pointer: coarse) {
+     .cl.cldden-touch { display: none !important; }
+ }
+ 
+ /*
+  * Hide if primary pointing device is accurate, e.g. mouse.
+  * 1. Fallback for IE11 and Firefox, because `pointer` is not supported
+  * 2. Reset if supported
+  */
+ 
+ /* 1 */
+ .cl.cldden-notouch { display: none !important; }
+ 
+ @media (pointer: coarse) {
+     .cl.cldden-notouch { display: block !important; }
+ }
