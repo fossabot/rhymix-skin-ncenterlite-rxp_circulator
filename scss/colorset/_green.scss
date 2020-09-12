@@ -1,0 +1,65 @@
+.rpx-ncenter-circulator--colorset-green {
+  background-color: #d2f1eb;
+  color: #009688;
+
+  a {
+    color: #009688;
+  }
+
+  a:hover {
+    color: #009688;
+  }
+
+  strong {
+    color: #009688;
+  }
+
+  a.notify strong {
+    color: #009688;
+  }
+
+  .msg {
+    color: #666;
+  }
+
+  .list {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .list li {
+    background-color: #fff;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .list li a:hover {
+    background-color: #f8f8f8;
+  }
+
+  .list span.ago {
+    color: #999;
+  }
+
+  .list a.notify .num {
+    background-color: #009688;
+    color: white;
+  }
+
+  .list .more:hover {
+    background-color: #f8f8f8;
+  }
+
+  a.readall {
+    color: #009688;
+  }
+
+  a.notify {
+    color: #009688;
+  }
+
+  a.notify .num {
+    background-color: #009688;
+    color: #fff;
+  }
+}

@@ -1,0 +1,68 @@
+.rpx-ncenter-circulator--colorset-black {
+  background-color: #333;
+  color: #fff;
+
+  a {
+    color: #999;
+  }
+
+  strong {
+    color: #fff;
+  }
+
+  a.notify strong {
+    color: #fff;
+  }
+
+  a.close:hover {
+    color: #fff;
+  }
+
+  .msg {
+    color: #999;
+  }
+
+  .list {
+    background-color: #333;
+  }
+
+  .list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .list li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .list span.ago {
+    color: #999;
+  }
+
+  .list a.notify .num {
+    background-color: #fff;
+    color: white;
+  }
+
+  .list .more:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  a.readall {
+    color: #999;
+  }
+
+  a.readall:hover {
+    color: #fff;
+  }
+
+  a.notify {
+    color: #fff;
+  }
+
+  a.notify .num {
+    background-color: #fff;
+    color: #333;
+  }
+}

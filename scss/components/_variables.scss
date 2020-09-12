@@ -1,4 +1,3 @@
-
 // ========================================================================
 // Component: Variables
 // ========================================================================
@@ -16,10 +15,9 @@ $breakpoint-small-max: ($breakpoint-medium - 1) !default;
 $breakpoint-medium-max: ($breakpoint-large - 1) !default;
 $breakpoint-large-max: ($breakpoint-xlarge - 1) !default;
 
-
-// 
+//
 // Color
-// 
+//
 
 $color-content: white !default;
 
@@ -58,10 +56,9 @@ $inverse-opacity-lighter: rgba($color-content, 0.4) !default;
 $inverse-opacity-light: rgba($color-content, 0.2) !default;
 $inverse-opacity-dark: rgba($color-content, 0.1) !default;
 
-
-// 
+//
 // Typography
-// 
+//
 
 // Global
 $global-font-family: 'Noto Sans Korean', 'Open Sans', "malgun gothic", "Nanum Gothic", dotum, arial, sans-serif;
@@ -78,10 +75,9 @@ $base-line-height-large: 1.2 !default;
 $base-line-height-xlarge: 1.3 !default;
 $base-line-height-xxlarge: 1.4 !default;
 
-
-// 
+//
 // Padding
-// 
+//
 
 $padding-xsmall: 10px !default;
 $padding-small: 15px !default;
@@ -90,18 +86,16 @@ $padding-medium: 50px !default;
 $padding-large: 100px !default;
 $padding-xlarge: 140px !default;
 
-
-// 
+//
 // Box-shadow
-// 
+//
 
 $box-shadow-small: 0 3px 4px rgba($color-base-darkest, 0.1) !default;
 $box-shadow-default: 0 2px 8px -3px rgba($color-base-darkest, 0.2) !default;
 $box-shadow-medium: 0 5px 8px rgba($color-base-darkest, 0.1) !default;
 
-
-// 
+//
 // border-rounded
-// 
+//
 
 $border-rounded-border-radius: 3px !default;

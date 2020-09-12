@@ -1,19 +1,19 @@
 </div>
 
 <script>
-  jQuery(function($){
-    $(".cl.tab").animate({
-      scrollLeft: $("#tab-active").position().left - 15
-    }, 0);
-  });
+    jQuery(function($){
+        $(".cl.tab").animate({
+            scrollLeft: $("#tab-active").position().left - 15
+        }, 0);
 
-  $('.cl.toggle').next().click(function() {
-    if ($(this).next().is(':checked')) {
-      $(this).prev().attr("checked", true);
-      $(this).next().attr("checked", false);
-    } else {
-      $(this).prev().attr("checked", false);
-      $(this).next().attr("checked", true);
-    };
-  });
+        $('.cl.toggle').next().click(function() {
+            if ($(this).next().is(':checked')) {
+                $(this).prev().attr("checked", true);
+                $(this).next().attr("checked", false);
+            } else {
+                $(this).prev().attr("checked", false);
+                $(this).next().attr("checked", true);
+            };
+        });
+    });
 </script>

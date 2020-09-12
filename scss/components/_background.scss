@@ -1,4 +1,3 @@
-
 // ========================================================================
 // Component: Background
 // ========================================================================
@@ -7,6 +6,7 @@
 .hi.text-color-inverse > * {
   color: $color-content;
 }
+
 .hi.background-color-content {
   background-color: $color-content;
 }
@@ -14,21 +14,27 @@
 .hi.background-color-base {
   background-color: $color-base !important;
 }
+
 .hi.background-color-base-light {
   background-color: $color-base-light !important;
 }
+
 .hi.background-color-base-lighter {
   background-color: $color-base-lighter !important;
 }
+
 .hi.background-color-base-lightest {
   background-color: $color-base-lightest !important;
 }
+
 .hi.background-color-base-dark {
   background-color: $color-base-dark !important;
 }
+
 .hi.background-color-base-darker {
   background-color: $color-base-darker !important;
 }
+
 .hi.background-color-base-darkest {
   background-color: $color-base-darkest !important;
 }
@@ -36,15 +42,19 @@
 .hi.background-color-primary {
   background-color: $color-primary !important;
 }
+
 .hi.background-color-primary-light {
   background-color: $color-primary-light !important;
 }
+
 .hi.background-color-primary-lighter {
   background-color: $color-primary-lighter !important;
 }
+
 .hi.background-color-primary-dark {
   background-color: $color-primary-dark !important;
 }
+
 .hi.background-color-primary-darker {
   background-color: $color-primary-darker !important;
 }
@@ -52,15 +62,19 @@
 .hi.background-color-success {
   background-color: $color-success !important;
 }
+
 .hi.background-color-success-light {
   background-color: $color-success-light !important;
 }
+
 .hi.background-color-success-lighter {
   background-color: $color-success-lighter !important;
 }
+
 .hi.background-color-success-dark {
   background-color: $color-success-dark !important;
 }
+
 .hi.background-color-success-darker {
   background-color: $color-success-darker !important;
 }
@@ -68,15 +82,19 @@
 .hi.background-color-danger {
   background-color: $color-danger !important;
 }
+
 .hi.background-color-danger-light {
   background-color: $color-danger-light !important;
 }
+
 .hi.background-color-danger-lighter {
   background-color: $color-danger-lighter !important;
 }
+
 .hi.background-color-danger-dark {
   background-color: $color-danger-dark !important;
 }
+
 .hi.background-color-danger-darker {
   background-color: $color-danger-darker !important;
 }

@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//script.ebay.co.kr/fonts/NotoSansKR-DemiLight-Hestia.eot), url(//script.ebay.co.kr/fonts/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype');
+  src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'), url(//script.ebay.co.kr/fonts/NotoSansKR-DemiLight-Hestia.woff) format('woff'), url(//script.ebay.co.kr/fonts/NotoSansKR-DemiLight-Hestia.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: bold;
+  src: url(//script.ebay.co.kr/fonts/NotoSansKR-Medium-Hestia.eot), url(//script.ebay.co.kr/fonts/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype');
+  src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(//script.ebay.co.kr/fonts/NotoSansKR-Medium-Hestia.woff) format('woff'), url(//script.ebay.co.kr/fonts/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+#nc_container {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 20px;
+  border-radius: 500px;
+  width: 330px;
+  height: 56px;
+  font-family: 'Noto Sans Korean', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 15px;
+  transform-origin: right;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.21, 0.12, 0.12, 0.95);
+  animation-name: animation-notify;
+}
+
+@keyframes animation-notify {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+#nc_container a {
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#nc_container ul.nc_memu {
+  display: block;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  line-height: 20px;
+}
+
+#nc_container ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#nc_container .list li {
+  margin: -1px 0;
+}
+
+#nc_container ul.nc_memu li {
+  display: inline-block;
+  height: 20px;
+  width: auto;
+  padding-right: 10px;
+  background: transparent !important;
+}
+
+#nc_container .fLeft {
+  float: left;
+}
+
+#nc_container .fRight {
+  float: right;
+}
+
+#nc_container ul.nc_memu li a.notify {
+  display: block;
+  float: left;
+}
+
+#nc_container a.close {
+  display: block;
+  opacity: 1;
+  text-shadow: none;
+}
+
+#nc_container .nc_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+#nc_container a.notify .num {
+  padding: 0 6px;
+  border: 0;
+  border-radius: 500px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#nc_container .list {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 30px;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#nc_container div.readall-wrap {
+  padding: 10px;
+  text-align: right;
+}
+
+#nc_container a.readall {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#nc_container .listscroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#nc_container .list ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+#nc_container .list li img {
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 500px;
+}
+
+#nc_container .list li a {
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+#nc_container .list span.ago {
+  display: block;
+  font-size: 10px;
+  margin-left: 50px;
+}
+
+#nc_container .list .more {
+  display: block;
+  padding: 14px;
+  text-align: center;
+}
+
+#nc_container a:hover,
+#nc_container .list li a:hover,
+#nc_container .list .more:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  #nc_container {
+    max-width: 92%;
+    position: fixed;
+    margin: 4%;
+  }
+
+  #nc_container .list {
+    top: 30px;
+    position: relative;
+  }
+
+  #nc_container .list ul {
+    display: block;
+    position: relative;
+  }
+
+  #nc_container ul.nc_memu::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  #nc_container .listscroll {
+    overflow: visible;
+  }
+
+  .ncenterlite_block {
+    display: none;
+  }
+}
+
+@import 'colorset'

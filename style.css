@@ -16,8 +16,8 @@
 }
 
 .cl, .cl > * {
-	font-family: 'Noto Sans Korean', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
+  font-family: 'Noto Sans Korean', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
 }
 
 .cl * + p {
@@ -35,149 +35,146 @@
 }
 @media (min-width: 960px) {
   .cl.container {
-		max-width: 1080px;
+    max-width: 1080px;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 }
 .cl.container {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .cl.section {
-	margin-top: 40px;
+  margin-top: 40px;
 }
 
 .cl h3 {
-	color: #333;
-	font-size: 1.5rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin-top: 20px;
-	margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cl.navbar {
-	box-sizing: border-box;
-	overflow: hidden;
-	width: 100%;
-	height: 61px;
-	padding-left: 0;
-	padding-right: 0;
-	white-space: nowrap;
-	border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 61px;
+  padding-left: 0;
+  padding-right: 0;
+  white-space: nowrap;
+  border-bottom: 1px solid #f5f5f5;
 }
 .cl.tab {
-	list-style: outside none none;
+  list-style: outside none none;
   display: block;
   height: 70px;
-	overflow-x: auto;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .cl.tab li {
-	display: inline-block;
+  display: inline-block;
 }
 .cl.tab li > a {
-	display: inline-block;
-	text-decoration: none;
-	padding: 10px 14px;
-	color: #999;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 14px;
+  color: #999;
   font-size: 0.875rem;
-	letter-spacing: -1px;
-	padding: 0 14px;
+  letter-spacing: -1px;
+  padding: 0 14px;
   line-height: 58px;
-  
-  -webkit-transition: all 150ms;
-  -moz-transition: all 150ms;
-  -o-transition: all 150ms;
+
   transition: all 150ms;
 }
 .cl.tab li > a:hover {
-	color: #666;
+  color: #666;
 }
 .cl.tab li > a:active {
-	color: #333;
+  color: #333;
 }
 .cl.tab li.active > a {
-	color: #333;
-	border-bottom: 2px solid #333;
+  color: #333;
+  border-bottom: 2px solid #333;
 }
 
 .cl.table {
-	max-width: 100%;
+  max-width: 100%;
   background-color: transparent;
-	overflow: hidden;
+  overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
 
-	border-collapse: separate;
-	border-spacing: 0;
-	border-radius: 4px;
-	border: 1px solid #e5e5e5;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
 }
 .cl.table td,
 .cl.table th {
-	border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 .cl.table tr:last-child > td {
-	border-bottom: none;
+  border-bottom: none;
 }
 .cl.table thead > tr > th {
-	padding: 16px;
+  padding: 16px;
   white-space: nowrap;
   color: #333;
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 .cl.table tbody > tr > td {
-	padding: 5px 10px;
+  padding: 5px 10px;
 }
 .cl.table-striped tbody > tr:nth-child(even) > td,
 .cl.table-striped tbody > tr:nth-child(even) > th {
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .cl.pagination-centered {
-	text-align: center;
+  text-align: center;
 }
 
 .cl.pagination {
   margin-bottom: 40px;
 }
 .cl.pagination ul {
-	list-style-type: none;
-	padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 .cl.pagination ul > li,
 .cl.pagination ul > li > a {
-	display: inline-block;
+  display: inline-block;
 }
 .cl.pagination ul > li > a {
-	padding: 6px 10px;
-	text-decoration: none;
-	text-align: center;
-	vertical-align: middle;
-	color: #999;
-	font-size: 16px;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #999;
+  font-size: 16px;
 }
 
 .cl.pagination ul > li > a.direction {
-	padding: 10px;
+  padding: 10px;
 }
 .cl.pagination ul > li > a:not(.direction) {
 }
 .cl.pagination ul > li > a:hover {
-	color: #666;
+  color: #666;
 }
 .cl.pagination ul > li > a:active {
-	color: #333;
+  color: #333;
 }
 .cl.pagination ul > li.active > a {
-	color: #333;
-	border-radius: 3px;
-	border: 1px solid #e5e5e5;
+  color: #333;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
 }
 
 .cl.margin {

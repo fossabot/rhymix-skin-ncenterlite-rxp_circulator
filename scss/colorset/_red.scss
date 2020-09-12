@@ -1,0 +1,65 @@
+.rpx-ncenter-circulator--colorset-red {
+  background-color: #ffd4d1;
+  color: #f44336;
+
+  a {
+    color: #f44336;
+  }
+
+  a:hover {
+    color: #f44336;
+  }
+
+  strong {
+    color: #f44336;
+  }
+
+  a.notify strong {
+    color: #f44336;
+  }
+
+  .msg {
+    color: #666;
+  }
+
+  .list {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .list li {
+    background-color: #fff;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .list li a:hover {
+    background-color: #f8f8f8;
+  }
+
+  .list span.ago {
+    color: #999;
+  }
+
+  .list a.notify .num {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .list .more:hover {
+    background-color: #f8f8f8;
+  }
+
+  a.readall {
+    color: #f44336;
+  }
+
+  a.notify {
+    color: #f44336;
+  }
+
+  a.notify .num {
+    background-color: #f44336;
+    color: #fff;
+  }
+}

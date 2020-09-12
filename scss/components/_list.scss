@@ -1,28 +1,23 @@
 /* ========================================================================
- Component: List
+Component: List
 =========================================================================== */
 .cl.list {
   list-style-type: none;
-
   padding: 0;
   margin: $padding-small 0;
 
   & > li {
     position: relative;
     padding: $padding-small 0;
-
     border-bottom: 1px solid $color-base-lighter;
-
     transition: 250ms;
-    -o-transition: 250ms;
-    -moz-transition: 250ms;
-    -webkit-transition: 250ms;
 
     .cl.list-profile {
       width: 40px;
       min-width: 40px;
       height: 40px;
       margin-right: $padding-xsmall;
+
       img {
         border-radius: 100%;
       }
@@ -32,31 +27,34 @@
       margin: 0;
       font-weight: 500;
     }
+
     .cl.list-meta {
       color: $color-base;
       margin: 0;
+
       .cl.history-auth {
         position: relative;
         display: inline-block;
         width: 10px;
         height: 14px;
+
         &::before {
           content: "";
           position: absolute;
-
           top: 50%;
           left: 0;
           width: 5px;
           height: 5px;
-
           border-radius: 100%;
           background-color: $color-danger;
         }
+
         &.read {
           display: none;
         }
       }
     }
+
     .cl.overlay {
       position: absolute;
       top: 0;

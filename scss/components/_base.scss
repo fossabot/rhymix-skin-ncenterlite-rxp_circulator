@@ -1,12 +1,11 @@
-@charset "utf-8";
-
 /* ========================================================================
- Component: Base
- ========================================================================== */
+Component: Base
+========================================================================== */
 
-.cl, .cl > * {
-	font-family: $global-font-family;
-	font-size: $global-font-size;
+.cl,
+.cl > * {
+  font-family: $global-font-family;
+  font-size: $global-font-size;
 }
 
 @media (max-width: $breakpoint-small-max) {
@@ -15,9 +14,10 @@
     padding-right: 20px;
   }
 }
+
 @media (min-width: $breakpoint-medium) {
   .cl.container {
-		max-width: 1080px;
+    max-width: 1080px;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
@@ -25,7 +25,7 @@
 }
 
 .cl.container {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .cl.section {
@@ -36,6 +36,7 @@
 .cl.config-header {
   margin-bottom: 10px;
   border-bottom: 1px solid $color-base-lighter;
+
   .cl.config-title {
     color: $color-base-darker;
     font-size: 1.5rem;
@@ -43,24 +44,25 @@
     font-weight: normal;
     margin-bottom: 20px;
   }
+
   .cl.config-meta {
     margin-bottom: 20px;
   }
 }
 
 .cl h3 {
-	color: $color-base-darker;
-	font-size: 1.5rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin-bottom: 20px;
+  color: $color-base-darker;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .cl h4 {
-	color: $color-base-darker;
-	font-size: 1.25rem;
+  color: $color-base-darker;
+  font-size: 1.25rem;
   line-height: 1.4;
-	font-weight: normal;
+  font-weight: normal;
   margin-bottom: 20px;
 }
 
@@ -72,6 +74,7 @@
   font-size: $global-font-size-small;
   background-color: $color-primary-lighter;
   border-radius: $border-rounded-border-radius;
+
   p {
     margin: 0;
     font-size: $global-font-size-small;

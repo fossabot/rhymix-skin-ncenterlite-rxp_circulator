@@ -1,20 +1,18 @@
-
 /* ========================================================================
- Component: Table
- ========================================================================== */
+Component: Table
+========================================================================== */
 
 .cl.table {
-	max-width: 100%;
+  max-width: 100%;
   background-color: transparent;
-	overflow: hidden;
+  overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
-
-	border-collapse: separate;
-	border-spacing: 0;
-	border-radius: 4px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 4px;
   border: 1px solid $color-base-lighter;
-  
+
   a {
     color: $color-base-darker;
   }
@@ -23,23 +21,25 @@
 .cl.table td,
 .cl.table th {
   font-size: $global-font-size-small;
-	border-bottom: 1px solid $color-base-lighter;
+  border-bottom: 1px solid $color-base-lighter;
+}
+
+.cl.table tbody > tr > td {
+  padding: 5px 10px;
 }
 
 .cl.table tr:last-child > td {
-	border-bottom: none;
-}
-.cl.table thead > tr > th {
-	padding: 16px;
-  white-space: nowrap;
-  color: $color-base-darker;
-	background-color: $color-base-lightest;
-}
-.cl.table tbody > tr > td {
-	padding: 5px 10px;
-}
-.cl.table-striped tbody > tr:nth-child(even) > td,
-.cl.table-striped tbody > tr:nth-child(even) > th {
-	background-color: $color-base-lightest;
+  border-bottom: none;
 }
 
+.cl.table thead > tr > th {
+  padding: 16px;
+  white-space: nowrap;
+  color: $color-base-darker;
+  background-color: $color-base-lightest;
+}
+
+.cl.table-striped tbody > tr:nth-child(even) > td,
+.cl.table-striped tbody > tr:nth-child(even) > th {
+  background-color: $color-base-lightest;
+}
