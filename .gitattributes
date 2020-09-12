@@ -1,0 +1,4 @@
+.gitattributes export-ignore
+
+*.css linguist-vendored
+*.php linguist-vendored
