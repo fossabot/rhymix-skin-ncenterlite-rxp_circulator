@@ -4,7 +4,7 @@ var $ = require('gulp-load-plugins')()
 var taskSass = function () {
   return gulp.src('./scss/*.scss')
     .pipe($.plumber())
-    .pipe($.sass({ outputStyle: 'expanded' }).on('error', $.sass.logError))
+    .pipe($.sass({ outputStyle: 'compressed' }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       cascade: false
     }))

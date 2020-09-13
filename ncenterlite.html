@@ -1,96 +1,96 @@
 <div class="ncenter-container rpx-ncenter-circulator rpx-ncenter-circulator--colorset-{$ncenterlite_config->colorset}" id="nc_container" {$ncenterlite_zindex}>
-    <ul class="nc_memu">
-        <li class="nc_profile fLeft">
-            <block cond="$useProfileImage">
-                <img cond="$profileImage" src="{$profileImage->src}" alt="my profile" class="nc_profile_img" />
-                <img cond="!$profileImage" src="{Context::getRequestUri()}modules/ncenterlite/skins/rxp_circulator/img/ic_profile_default.png" alt="my profile" class="nc_profile_img" />
-            </block>
-        </li>
-
-        <li class="fLeft">
-            <a class="notify" href="#">
-                <strong>{$logged_info->nick_name}{$lang->ncenterlite_sir}!</strong>
-                <br>
-                <!--@if($_ncenterlite_num > 1)-->
-                    {sprintf($lang->ncenterlite_messages, $ncenterlite_page_navigation->total_count)}
-                <!--@else-->
-                    {sprintf($lang->ncenterlite_message, $ncenterlite_page_navigation->total_count)}
-                <!--@endif-->
-            </a>
-        </li>
-
-        <li class="fRight"><a class="close" href="#">× Close</a></li>
-    </ul>
-
-    <div class="list">
-        <div class="readall-wrap">
-            <a cond="$ncenterlite_page_navigation->total_count >= 1" href="#" class="readall">{$lang->ncenterlite_delete_all}</a>
+    <div class="ncenter__banner nc-banner __ncenter-toggle-list">
+        <div class="nc-banner__icon">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+            </svg>
         </div>
-        <ul>
-            <li loop="$ncenterlite_list => $o">
-                <a href="{$o->url}">
-                    <div class="fLeft">
-                        <block cond="$useProfileImage">
-                            <img src="{$o->profileImage}"|cond="$o->profileImage" src="{Context::getRequestUri()}modules/ncenterlite/skins/rxp_circulator/img/ic_profile_default.png"|cond="!$o->profileImage" alt="" class="nc_profile_img" />
-                        </block>
-                        <span class="msg">{$o->text}</span>
-                        <span class="ago">{$o->ago}</span>
-                    </div>
-                </a>
-            </li>
-        </ul>
-        <a cond="$ncenterlite_page_navigation->total_count > 5" class="more" href="#" data-page="2">{$lang->ncenterlite_more}</a>
+
+        <div class="nc-banner__notify">
+            <!--@if($_ncenterlite_num > 1)-->
+                {sprintf($lang->ncenterlite_messages, $ncenterlite_page_navigation->total_count)}
+            <!--@else-->
+                {sprintf($lang->ncenterlite_message, $ncenterlite_page_navigation->total_count)}
+            <!--@endif-->
+        </div>
+
+        <button type="button" class="button--link nc-banner__close">&times;</button>
+    </div>
+
+    <div class="ncenter__list-container list">
+        <div class="readall-wrap">
+            <a href="{getUrl('act', 'dispNcenterliteUserConfig')}" class="ncenter__config-link" title="내 알림 설정">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"/>
+                </svg>
+            </a>
+            <button type="button" cond="$ncenterlite_page_navigation->total_count >= 1" class="button--link readall">{$lang->ncenterlite_delete_all}</button>
+        </div>
+
+        <div class="list-scroll">
+            <ul class="ncenter__list">
+                <li class="ncenter__item nc-item" loop="$ncenterlite_list => $o">
+                    <a class="nc-item__link nc-link" href="{$o->url}">
+                        <div class="fLeft">
+                            <block cond="$useProfileImage">
+                                <img src="{$o->profileImage}"|cond="$o->profileImage" src="{Context::getRequestUri()}modules/ncenterlite/skins/rxp_circulator/img/ic_profile_default.png"|cond="!$o->profileImage" alt="" class="nc-item__profile-image nc_profile_img" />
+                            </block>
+                            <span class="nc-item__message msg">{$o->text}</span>
+                            <span class="nc-item__time ago">{$o->ago}</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" cond="$ncenterlite_page_navigation->total_count > 5" class="button--link more" data-page="2">{$lang->ncenterlite_more}</button>
+        </div>
     </div>
 </div>
+
 <div class="ncenterlite_block"></div>
 
 <script>
 jQuery(function ($) {
-    function setCookie (n, v, d) {
-        var e = ''
-        if (d) {
-            var dt = new Date()
-            dt.setTime(dt.getTime() + d * 24 * 60 * 60000)
-            e = '; expires=' + dt.toGMTString()
-        }
-        document.cookie = n + '=' + v + e + '; path=/'
-    }
+    // TODO
+    var $container = $('.ncenter-container')
+    var $close = $container.find('.nc-banner__close')
+    var $readall = $container.find('.readall')
+    var $listContainer = $container.find('.ncenter__list-container')
+    var $toggleList = $container.find('.__ncenter-toggle-list')
 
-    var n = $('#nc_container')
-    $('.close', n).click(function () {
-        setCookie('_ncenterlite_hide_id', '{$ncenterlite_latest_notify_id}', 1)
-        n.hide()
+    $close.on('click', function (e) {
+        e.stopPropagation()
+        XE.cookie.set('_ncenterlite_hide_id', '{$ncenterlite_latest_notify_id}', { expires: 1 })
+        $container.hide()
             .next('div')
             .hide()
-        return false
     })
-    $('.readall', n).click(function () {
+
+    $readall.on('click', function () {
         exec_xml('ncenterlite', 'procNcenterliteNotifyReadAll')
-        $('.close', n).triggerHandler('click')
-        return false
+        $close.triggerHandler('click')
     })
-    $('a.notify', n).click(function () {
-        $('.list', n).toggle()
-        $('.readall', n).toggle()
-        return false
+
+    $toggleList.on('click', function () {
+        $listContainer.toggleClass('ncenter__list-container--show')
     })
-    $(document).click(function (e) {
+
+    $(document).on('click', function (e) {
         var t = $(e.target)
-        if (!t.is('#nc_container') && t.parents('#nc_container').length == 0) {
-            if ($('.list', n).is(':visible')) {
-                $('.list', n).hide()
-                $('.readall', n).hide()
+        if (!t.is('.ncenter-container') && t.parents('.ncenter-container').length == 0) {
+            if ($listContainer.is(':visible')) {
+                $listContainer.removeClass('ncenter__list-container--show')
+                $readall.hide()
                 return false
             }
         }
     })
 
-    var $listWrap = $('.list ul', n)
-    var $btnMore = $('.more', n)
+    var $listWrap = $('.ncenter__list', $container)
+    var $btnMore = $('.more', $container)
     $btnMore.click(function () {
         var page = $(this).data('page')
-        var $item_html = $('<li><a><span class="msg"></span><span class="ago"></span></a></li>')
-        var $profileImg = $('<img class="nc_profile_img" alt="" />')
+        var $item_html = $('<li class="ncenter__item nc-item"><a class="nc-item__link"><span class="nc-item__message msg"></span><span class="nc-item__time ago"></span></a></li>')
+        var $profileImg = $('<img class="nc-item__profile-image nc_profile_img" alt="" />')
         $.exec_json(
             'ncenterlite.getMyNotifyListTpl',
             { page: page },
@@ -134,18 +134,4 @@ jQuery(function ($) {
         return false
     })
 })
-
-/* <block cond="!Mobile::isFromMobilePhone()"> */
-function sc () {
-    var wh = $(window).height()
-    var l = $('#nc_container .list')
-    if (l.height() + 100 >= wh) {
-        l.height(wh - 98).addClass('listscroll')
-    } else {
-        l.height('auto').removeClass('listscroll')
-    }
-    setTimeout(sc, 100)
-}
-sc()
-/* </block> */
 </script>

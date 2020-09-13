@@ -1,6 +1,9 @@
 .rpx-ncenter-circulator--colorset-black {
-  background-color: #333;
   color: #fff;
+
+  .ncenter__banner {
+    background-color: #333;
+  }
 
   a {
     color: #999;
@@ -14,7 +17,7 @@
     color: #fff;
   }
 
-  a.close:hover {
+  .ncenter__close:hover {
     color: #fff;
   }
 

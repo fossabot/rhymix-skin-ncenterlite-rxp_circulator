@@ -4,8 +4,11 @@
     <version>1.4</version>
     <date>2018-05-07</date>
 
-    <author email_address="hello@calvinsnax.xyz" link="http://calvinsnax.xyz/">
+    <author link="https://calvinsnax.com">
         <name xml:lang="ko">Calvin Snax</name>
+    </author>
+    <author link="https://github.com/rx-public">
+        <name xml:lang="ko">RXPublic</name>
     </author>
 
     <colorset>

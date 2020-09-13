@@ -1,7 +1,9 @@
 .rpx-ncenter-circulator--colorset-white {
-  background-color: #fff;
+  .ncenter__banner {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
   color: #666;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 
   a {
     color: #666;

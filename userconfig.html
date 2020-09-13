@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="cl control">
-                    <input type="radio" id="comment-notify" class="cl toggle" name="comment_notify" value="Y" checked="checked"|cond="$user_config->comment_notify == 'Y'" />
+                    <input type="radio" id="comment-notify" class="cl toggle" name="comment_notify" value="Y" checked="checked"|cond="$user_config->comment_notify != 'N'" />
                     <div class="cl button-toggle"></div>
                     <input type="radio" name="comment_notify" value="N" checked="checked"|cond="$user_config->comment_notify == 'N'" />
                 </div>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="cl control">
-                    <input type="radio" id="mention-notify" class="cl toggle" name="mention_notify" value="Y" checked="checked"|cond="$user_config->mention_notify == 'Y'" />
+                    <input type="radio" id="mention-notify" class="cl toggle" name="mention_notify" value="Y" checked="checked"|cond="$user_config->mention_notify != 'N'" />
                     <div class="cl button-toggle"></div>
                     <input type="radio" name="mention_notify" value="N" checked="checked"|cond="$user_config->mention_notify == 'N'" />
                 </div>
@@ -54,9 +54,50 @@
                 </div>
 
                 <div class="cl control">
-                    <input type="radio" id="message-notify" class="cl toggle" name="message_notify" value="Y" checked="checked"|cond="$user_config->message_notify == 'Y'" />
+                    <input type="radio" id="message-notify" class="cl toggle" name="message_notify" value="Y" checked="checked"|cond="$user_config->message_notify != 'N'" />
                     <div class="cl button-toggle"></div>
                     <input type="radio" name="message_notify" value="N" checked="checked"|cond="$user_config->message_notify == 'N'" />
+                </div>
+            </div>
+
+
+
+            <div class="cl control-group">
+                <div class="cl control-info">
+                    <h4 class="cl control-title">{$lang->ncenterlite_vote_noti}</h4>
+                    <p class="cl control-meta">{$lang->ncenterlite_vote_noti_about}</p>
+                </div>
+
+                <div class="cl control">
+                    <input type="radio" id="message-notify" class="cl toggle" name="vote_notify" value="Y" checked="checked"|cond="$user_config->vote_notify != 'N'" />
+                    <div class="cl button-toggle"></div>
+                    <input type="radio" name="vote_notify" value="N" checked="checked"|cond="$user_config->vote_notify == 'N'" />
+                </div>
+            </div>
+
+            <div class="cl control-group">
+                <div class="cl control-info">
+                    <h4 class="cl control-title">{$lang->ncenterlite_scrap_noti}</h4>
+                    <p class="cl control-meta">{$lang->ncenterlite_scrap_noti_about}</p>
+                </div>
+
+                <div class="cl control">
+                    <input type="radio" id="message-notify" class="cl toggle" name="scrap_notify" value="Y" checked="checked"|cond="$user_config->scrap_notify != 'N'" />
+                    <div class="cl button-toggle"></div>
+                    <input type="radio" name="scrap_notify" value="N" checked="checked"|cond="$user_config->scrap_notify == 'N'" />
+                </div>
+            </div>
+
+            <div class="cl control-group">
+                <div class="cl control-info">
+                    <h4 class="cl control-title">{$lang->ncenterlite_comment_comment_noti}</h4>
+                    <p class="cl control-meta">{$lang->ncenterlite_comment_comment_noti_about}</p>
+                </div>
+
+                <div class="cl control">
+                    <input type="radio" id="message-notify" class="cl toggle" name="comment_comment_notify" value="Y" checked="checked"|cond="$user_config->comment_comment_notify != 'N'" />
+                    <div class="cl button-toggle"></div>
+                    <input type="radio" name="comment_comment_notify" value="N" checked="checked"|cond="$user_config->comment_comment_notify == 'N'" />
                 </div>
             </div>
         </section>
