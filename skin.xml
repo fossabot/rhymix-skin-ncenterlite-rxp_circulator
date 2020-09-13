@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
-    <title xml:lang="ko">C!rculator 알림센터 모듈 스킨</title>
-    <version>1.4</version>
-    <date>2018-05-07</date>
+    <title xml:lang="ko">RXP C!rculator</title>
+    <version>2.0.0</version>
+    <date>2020-09-13</date>
 
     <author link="https://calvinsnax.com">
         <name xml:lang="ko">Calvin Snax</name>
